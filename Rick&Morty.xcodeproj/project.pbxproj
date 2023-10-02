@@ -11,6 +11,7 @@
 		E4C142FA2ACB424500431140 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C142F92ACB424500431140 /* ContentView.swift */; };
 		E4C142FC2ACB424600431140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C142FB2ACB424600431140 /* Assets.xcassets */; };
 		E4C142FF2ACB424600431140 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C142FE2ACB424600431140 /* Preview Assets.xcassets */; };
+		E4C143072ACB43AA00431140 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4C143062ACB43AA00431140 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C143072ACB43AA00431140 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "Rick&Morty";
+			packageProductDependencies = (
+				E4C143062ACB43AA00431140 /* Alamofire */,
+			);
 			productName = "Rick&Morty";
 			productReference = E4C142F42ACB424500431140 /* Rick&Morty.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = E4C142EB2ACB424400431140;
+			packageReferences = (
+				E4C143052ACB43AA00431140 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E4C142F52ACB424500431140 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,7 +205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -344,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4C143052ACB43AA00431140 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4C143062ACB43AA00431140 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4C143052ACB43AA00431140 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4C142EC2ACB424400431140 /* Project object */;
 }
