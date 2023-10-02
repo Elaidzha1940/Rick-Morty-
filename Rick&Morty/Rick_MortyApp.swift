@@ -1,7 +1,7 @@
 //  /*
 //
 //  Project: Rick&Morty
-//  File: ContentView.swift
+//  File: Rick_MortyApp.swift
 //  Created by: Elaidzha Shchukin
 //  Date: 02.10.2023
 //

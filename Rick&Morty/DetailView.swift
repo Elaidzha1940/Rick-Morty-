@@ -1,9 +1,11 @@
+//  /*
 //
-//  DetailView.swift
-//  Rick&Morty
+//  Project: Rick&Morty
+//  File: DetailView.swift
+//  Created by: Elaidzha Shchukin
+//  Date: 02.10.2023
 //
-//  Created by Elaidzha Shchukin on 02.10.2023.
-//
+//  */
 
 import SwiftUI
 
