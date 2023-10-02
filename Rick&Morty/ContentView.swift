@@ -22,16 +22,19 @@ struct CharacterResponse: Decodable {
 
 struct ContentView: View {
     @State private var characters: [Character] = []
+    @State private var selectedCharacter: Character? = nil
 
     var body: some View {
         NavigationView {
             List(characters) { character in
-                VStack(alignment: .leading) {
-                    Text(character.name)
-                        .font(.headline)
-                    Text(character.status)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+                NavigationLink(destination: DetailView(character: character)) {
+                    VStack(alignment: .leading) {
+                        Text(character.name)
+                            .font(.headline)
+                        Text(character.status)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
                 }
             }
             .navigationTitle("Rick and Morty Characters")
@@ -40,18 +43,18 @@ struct ContentView: View {
     }
 
     func loadData() {
-        AF.request("https://rickandmortyapi.com/api/character")
-            .validate()
-            .responseDecodable(of: CharacterResponse.self) { response in
-                switch response.result {
-                case .success(let characterResponse):
-                    self.characters = characterResponse.results
-                case .failure(let error):
-                    print("Error loading data: \(error)")
-                }
-            }
-    }
-}
+           AF.request("https://rickandmortyapi.com/api/character")
+               .validate()
+               .responseDecodable(of: CharacterResponse.self) { response in
+                   switch response.result {
+                   case .success(let characterResponse):
+                       self.characters = characterResponse.results
+                   case .failure(let error):
+                       print("Error loading data: \(error)")
+                   }
+               }
+       }
+   }
 
 #Preview {
     ContentView()
